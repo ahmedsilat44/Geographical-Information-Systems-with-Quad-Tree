@@ -45,8 +45,11 @@ int main() {
 
     Point p11(1, 1);
     qt.insert_point(p11);
+    // qt.print_Quadtree();
     Point p12(5, 5);
     qt.insert_point(p12);
+    // std::cout<< "\nHEHEHEHE\n";
+    // qt.print_Quadtree();
     Point p13(8, 8);
     qt.insert_point(p13);
 

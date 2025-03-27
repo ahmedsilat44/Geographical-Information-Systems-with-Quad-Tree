@@ -10,15 +10,20 @@ bool Quadtree::insert_point(Point point){
         return false;
     }
 
-    if (points.size() < capacity){ //has the num of points in a qaudrant reached its limit
-        points.push_back(point);
-        return true;
+    if (points.size() == capacity){ //has the num of points in a qaudrant reached its limit
+        divide();
     }
 
-    if (divided != true){ 
-        divide(); 
-    }
+    // if (divided != true){ 
+    //     divide(); 
+    // }
+
+    points.push_back(point);
+    // return true;
     
+    if (divided == false){ //if we have not divided yet, we can insert the point
+        return true;
+    }
     //going into the children of the quadtree and checking if we can insert there
     if (nw->insert_point(point) == true){ 
         return true; 
@@ -41,8 +46,8 @@ void Quadtree::divide(){
     Point boundary_center = boundary.get_center();
     double center_x = boundary_center.get_x();
     double center_y = boundary_center.get_y();
-    double new_width = boundary.get_width() / 2; 
-    double new_height = boundary.get_height() / 2; 
+    double new_width = center_x / 2; 
+    double new_height = center_y / 2; 
 
     Box temp_nw = Box(Point (center_x - new_width, center_y - new_height), new_width, new_height); 
     nw = new Quadtree(temp_nw);
@@ -53,6 +58,14 @@ void Quadtree::divide(){
     Box temp_se = Box(Point(center_x + new_width, center_y + new_height), new_width, new_height); 
     se = new Quadtree(temp_se);
     divided = true;
+
+    // Insert existing points into the new quadrants
+    for (const auto& point : points) {
+        nw->insert_point(point);
+        ne->insert_point(point);
+        sw->insert_point(point);
+        se->insert_point(point);
+    }
 }
 
 // void Quadtree::print_Quadtree(int depth) {
@@ -86,7 +99,6 @@ void Quadtree::divide(){
 //     }
 // }
 
-
 void Quadtree::print_Quadtree(int depth) {
     std::cout << "Box: " << depth << " points: ";
     for(auto p: points){
@@ -115,6 +127,43 @@ void Quadtree::print_Quadtree(int depth) {
 
 
 }
+
+// void Quadtree::print_Quadtree(int depth) {
+//     // Indentation for visualization
+//     for (int i = 0; i < depth; i++) std::cout << "  ";
+
+//     // Print the current node's boundary
+//     Point boundary_center = boundary.get_center();
+//     std::cout << "Node Boundary: (" << boundary_center.get_x() << ", " << boundary_center.get_y() << ") "
+//               << "Width: " << boundary.get_width() << ", Height: " << boundary.get_height() << "\n";
+
+//     // Print points only if there are any
+//     if (!points.empty()) {
+//         for (int i = 0; i < depth; i++) std::cout << "  ";
+//         std::cout << "Points: ";
+//         for ( auto& p : points) {
+//             std::cout << "(" << p.get_x() << ", " << p.get_y() << ") ";
+//         }
+//         std::cout << "\n";
+//     }
+
+//     // If subdivided, print subdivisions and recursively print children
+//     if (divided) {
+//         for (int i = 0; i < depth; i++) std::cout << "  ";
+//         std::cout << "Subdivided:\n";
+
+//         if (nw != nullptr) nw->print_Quadtree(depth + 1);
+//         if (ne != nullptr) ne->print_Quadtree(depth + 1);
+//         if (sw != nullptr) sw->print_Quadtree(depth + 1);
+//         if (se != nullptr) se->print_Quadtree(depth + 1);
+//     }
+
+
+    
+
+
+// }
+
 
 Quadtree::~Quadtree(){
     delete nw;
