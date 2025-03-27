@@ -24,19 +24,10 @@ bool Quadtree::insert_point(Point point){
     if (divided == false){ //if we have not divided yet, we can insert the point
         return true;
     }
-    //going into the children of the quadtree and checking if we can insert there
-    if (nw->insert_point(point) == true){ 
-        return true; 
-    }
-    else if (ne->insert_point(point) == true){ 
-        return true; 
-    }
-    else if (sw->insert_point(point) == true){ 
-        return true; 
-    }
-    else if (se->insert_point(point) == true){ 
-        return true;
-    }
+    nw->insert_point(point);
+    ne->insert_point(point);
+    sw->insert_point(point);
+    se->insert_point(point);
     
     return false;
 }
