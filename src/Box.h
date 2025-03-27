@@ -1,20 +1,24 @@
 #ifndef BOX_H
 #define BOX_H
 
+#include "Point.h" 
+
 class Box {
 private:
-    double xMin, xMax, yMin, yMax;
+    Point center;
+    double width, height;
+    double west = center.get_x() - width;
+    double east = center.get_x() + width;
+    double north = center.get_y() - height; //y increases in the down direction hence the "- height"
+    double south = center.get_y() + height;
+    
 
 public:
-    Box(double xMin, double xMax, double yMin, double yMax);
-
-    double getXMin() const;
-    double getXMax() const;
-    double getYMin() const;
-    double getYMax() const;
-
-    bool contains(double x, double y) const;
-    bool intersects(const Box& other) const;
+    Box(Point center, double width, double height);
+    bool contains_point(Point point);
+    Point get_center();
+    double get_height();
+    double get_width();
 };
 
 #endif // BOX_H
