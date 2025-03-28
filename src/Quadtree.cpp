@@ -21,13 +21,13 @@ bool Quadtree::insert_point(Point point){
     points.push_back(point);
     // return true;
     
-    if (divided == false){ //if we have not divided yet, we can insert the point
-        return true;
+    if (divided == true){ //if we have not divided yet, we can insert the point
+        
+        nw->insert_point(point);
+        ne->insert_point(point);
+        sw->insert_point(point);
+        se->insert_point(point);
     }
-    nw->insert_point(point);
-    ne->insert_point(point);
-    sw->insert_point(point);
-    se->insert_point(point);
     
     return false;
 }
