@@ -22,3 +22,10 @@ double Box::get_width(){
 double Box::get_height(){
     return height;
 }
+
+bool Box::intersects(Box range){
+    return not (range.west>this->east or
+                range.east<this->west or
+                range.north>this->south
+                or range.south<this->north);
+}
