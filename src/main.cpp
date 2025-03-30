@@ -3,6 +3,12 @@
 #include <ctime>     // For time()
 #include "Quadtree.h"
 
+#include "matplotlibcpp.h"
+
+namespace plt = matplotlibcpp;
+
+
+
 int main() {
     srand(time(0)); // Seed for random number generation
 
@@ -21,6 +27,11 @@ int main() {
 
     //     std::cout << "Inserted: (" << x << ", " << y << ")\n";
     // }
+    plt::xlim(0, 20);
+    plt::ylim(0, 20);
+    plt::title("Quadtree Points Insertion");
+    plt::xlabel("X-axis");
+    plt::ylabel("Y-axis");
 
     Point p1(15.98, 8.21);
     qt.insert_point(p1);
@@ -58,6 +69,37 @@ int main() {
     // Print the Quadtree structure
     std::cout<< "\nQuadtree Structure:\n";
     qt.print_Quadtree();
+
+    // Extract points from the Quadtree for plotting
+    std::vector<Point> points = qt.get_points();
+    std::vector<double> x_vals, y_vals;
+    x_vals.push_back(points[0].get_x());
+    y_vals.push_back(points[0].get_y());
+    
+    plt::scatter(x_vals, y_vals, 10.0, {{"color", "k"}});
+    
+    // for (auto& point : points) {
+    //     x_vals.push_back(point.get_x());
+    //     y_vals.push_back(point.get_y());
+    //     plt::xlim(0, 20);
+    //     plt::ylim(0, 20);
+    //     plt::xlabel("X-axis");
+    //     plt::ylabel("Y-axis");
+    //     plt::pause(0.4); // Pause for a short time to visualize the insertion
+    
+    // }
+    
+    // Plot the points
+    // plt::scatter(x_vals, y_vals, 10.0, {{"color", "k"}});
+    // qt.draw();
+    
+    
+    
+    // call draw for each quadtree that is divided
+    
+    plt::title("Quadtree Points");
+    
+    plt::show();
 
     return 0;
 }
