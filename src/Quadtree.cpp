@@ -162,3 +162,105 @@ Quadtree::~Quadtree(){
     delete sw;
     delete se;
 }
+
+std::vector<Point> Quadtree::square_query(Box range){
+    std::vector<Point> found_points;
+
+    
+    if (this->boundary.intersects(range) == false)
+        return found_points;
+
+    for (Point point:points){
+        if (range.contains_point(point))
+            found_points.push_back(point);
+    }
+
+    // std::cout << found_points.size() << " points found in the search area:\n";
+
+    
+    if (this->divided){
+        std::vector<Point> nw_points;
+        std::vector<Point> ne_points;
+        std::vector<Point> sw_points;
+        std::vector<Point> se_points;
+        
+        if (this->nw != nullptr){
+            std::vector<Point> nw_points=this->nw->square_query(range);
+        }
+        if (this->ne != nullptr){
+            std::vector<Point> ne_points=this->ne->square_query(range);
+        }
+        if (this->sw != nullptr){
+            std::vector<Point> sw_points=this->sw->square_query(range);
+        }
+        if (this->se != nullptr){
+            std::vector<Point> se_points=this->se->square_query(range);
+        }
+
+        // std::cout << "searching in ne\n";
+        // std::vector<Point> ne_points=this->ne->square_query(range);
+        // std::cout << "searching in sw\n";
+        // std::vector<Point> sw_points=this->sw->square_query(range);
+        // std::cout << "searching in se\n";
+        // std::vector<Point> se_points=this->se->square_query(range);
+        found_points.insert(found_points.end(),nw_points.begin(),nw_points.end());
+        
+        found_points.insert(found_points.end(),ne_points.begin(),ne_points.end());
+        found_points.insert(found_points.end(),sw_points.begin(),sw_points.end());
+        found_points.insert(found_points.end(),se_points.begin(),se_points.end());
+
+        
+        std::cout << found_points.size() << " points found in the search area:\n";
+    }
+
+    return found_points;
+}
+
+std::vector<Point> Quadtree::circle_query(Box range, Point center){
+    std::vector<Point> found_points;
+    if (!this->boundary.intersects(range))
+        return found_points;
+
+    for (Point point:points){
+        if (range.contains_point(point) & point.distance_from_center(center)<=range.get_width() & point != center)
+            found_points.push_back(point);
+    }
+    
+    if (this->divided){
+
+        std::vector<Point> nw_points;
+        std::vector<Point> ne_points;
+        std::vector<Point> sw_points;
+        std::vector<Point> se_points;
+
+
+
+
+
+        // std::vector<Point> nw_points=this->nw->circle_query(range,center);
+        // std::vector<Point> ne_points=this->ne->circle_query(range,center);
+        // std::vector<Point> sw_points=this->sw->circle_query(range,center);
+        // std::vector<Point> se_points=this->se->circle_query(range,center);
+
+        if (this->nw != nullptr){
+            std::vector<Point> nw_points=this->nw->circle_query(range,center);
+        }
+        if (this->ne != nullptr){
+            std::vector<Point> ne_points=this->ne->circle_query(range,center);
+        }
+        if (this->sw != nullptr){
+            std::vector<Point> sw_points=this->sw->circle_query(range,center);
+        }
+        if (this->se != nullptr){
+            std::vector<Point> se_points=this->se->circle_query(range,center);
+        }
+
+
+        found_points.insert(found_points.end(),nw_points.begin(),nw_points.end());
+        found_points.insert(found_points.end(),ne_points.begin(),ne_points.end());
+        found_points.insert(found_points.end(),sw_points.begin(),sw_points.end());
+        found_points.insert(found_points.end(),se_points.begin(),se_points.end());
+    }
+
+    return found_points;
+}
