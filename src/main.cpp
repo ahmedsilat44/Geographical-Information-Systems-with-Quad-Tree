@@ -59,5 +59,28 @@ int main() {
     std::cout<< "\nQuadtree Structure:\n";
     qt.print_Quadtree();
 
+    std::cout << "searching for points in the range (10, 10) to (20, 20)\n";
+
+    // search 
+    Box search_area(p1, 5, 5); // Define a search area (center at (10,10), width and height of 5)
+    std::vector<Point> found_points = qt.square_query(search_area);
+
+    std::cout << found_points.size() << " points found in the search area:\n";
+
+    std::cout << "\nPoints found in the search area:\n";
+    for (auto& point : found_points) {
+        std::cout << "(" << point.get_x() << ", " << point.get_y() << ")\n";
+    }
+
+
+    // Define a circle query area (center at p1, radius of 5)
+    std::cout << "\nSearching for points in the circle query area:\n";
+    std::vector<Point> circle_found_points = qt.circle_query(search_area, p1);
+    std::cout << circle_found_points.size() << " points found in the circle query area:\n";
+
+    for (auto& point : circle_found_points) {
+        std::cout << "(" << point.get_x() << ", " << point.get_y() << ")\n";
+    }
+
     return 0;
 }

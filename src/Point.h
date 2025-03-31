@@ -11,6 +11,8 @@ class Point {
         double get_x();
         double get_y();
         int distance_from_center(Point center);
+        // != operator
+        bool operator!=(const Point& other) const;
 };
 
 #endif // POINT_H

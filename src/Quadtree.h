@@ -21,6 +21,8 @@ class Quadtree{
         void print_Quadtree(int deapth = 0);
         std::vector<Point> square_query(Box range);
         std::vector<Point> circle_query(Box range, Point center);
+        
+
         ~Quadtree();
 
 };
