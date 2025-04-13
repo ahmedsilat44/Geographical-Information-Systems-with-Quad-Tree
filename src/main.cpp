@@ -58,7 +58,7 @@ int main() {
     // // Print the Quadtree structure
     
     std::cout << "Would you like to (A) insert your own points or (B) use pre defined points\n";
-    std::cout << "Enter you choice: ";
+    std::cout << "Enter your choice: ";
     char choice;
     std::cin >> choice;
     while(!(choice == 'A' || choice == 'a' || choice == 'B' || choice == 'b')){
