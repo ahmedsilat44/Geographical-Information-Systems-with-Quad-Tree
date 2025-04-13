@@ -19,6 +19,7 @@ public:
     Point get_center();
     double get_height();
     double get_width();
+    bool intersects(Box range);
 };
 
 #endif // BOX_H
