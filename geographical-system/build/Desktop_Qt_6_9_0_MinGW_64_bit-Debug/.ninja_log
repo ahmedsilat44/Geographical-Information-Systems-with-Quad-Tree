@@ -1,0 +1,17 @@
+# ninja log v6
+153	5637	7662571812693990	geographical-system_autogen/timestamp	23a9a4d0eb03046d
+153	5637	7662571812693990	geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
+153	5637	7662571812693990	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	23a9a4d0eb03046d
+153	5637	7662571812693990	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
+5654	15726	7662571814683956	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	a0493636cd5556b3
+5644	15728	7662571814583941	CMakeFiles/geographical-system.dir/geographical-system_autogen/mocs_compilation.cpp.obj	1c7bd4d74bee3599
+5648	15739	7662571814626236	CMakeFiles/geographical-system.dir/main.cpp.obj	c7634a00ea5499e8
+5659	15866	7662571814733965	CMakeFiles/geographical-system.dir/insertpage.cpp.obj	64a3b760752b452c
+5664	16583	7662571814783979	CMakeFiles/geographical-system.dir/pointstable.cpp.obj	6c29fbc791dcbbb1
+16583	17736	7662571923974052	geographical-system.exe	e42deb740934acba
+37	441	7662573399637955	geographical-system_autogen/timestamp	23a9a4d0eb03046d
+37	441	7662573399637955	geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
+37	441	7662573399637955	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	23a9a4d0eb03046d
+37	441	7662573399637955	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
+442	6501	7662573403687961	CMakeFiles/geographical-system.dir/pointstable.cpp.obj	6c29fbc791dcbbb1
+6501	7006	7662573464272081	geographical-system.exe	e42deb740934acba

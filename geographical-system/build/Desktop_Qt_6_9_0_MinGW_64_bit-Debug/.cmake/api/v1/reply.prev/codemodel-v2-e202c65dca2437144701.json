@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-815a71c7cdd9eb5498c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "geographical-system",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "geographical-system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geographical-system-Debug-602a785ed6f59098949c.json",
+					"name" : "geographical-system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "geographical-system_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geographical-system_autogen-Debug-4ba2a2d99a3f18ca5843.json",
+					"name" : "geographical-system_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "geographical-system_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geographical-system_autogen_timestamp_deps-Debug-1a0cb656ebcdcf471526.json",
+					"name" : "geographical-system_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
+		"source" : "D:/Faheem/habib/cs/DS2/project/geographical-system"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
