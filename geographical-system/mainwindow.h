@@ -7,8 +7,7 @@ class pointsTable;
 #include "Quadtree.h"
 
 #include <QWidget>
-#include "insertpage.h"
-#include "pointstable.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,12 +28,26 @@ private slots:
 
     void on_tableButton_clicked();
 
+    void on_backButton_2_clicked();
+
+    void on_backButton_clicked();
+
+    void on_pushButton_clicked();
+
+    void populateTableWidget();
+
+    void on_searchButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_searchButton_2_clicked();
+
 private:
     Ui::Widget *ui;
-    insertPage *insertpage;
-    pointsTable *pointstable;
-    QuadTree *quadtree; // quadtree pointer
-    
 
+    Quadtree *quadtree; // quadtree pointer
+    
+signals:
+    void pointInserted();  // Custom signal
 };
 #endif // WIDGET_H

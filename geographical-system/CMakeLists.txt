@@ -11,8 +11,12 @@ qt_add_executable(geographical-system
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    insertpage.h insertpage.cpp insertpage.ui
-    pointstable.h pointstable.cpp pointstable.ui
+
+
+    Box.h Box.cpp
+    Point.h Point.cpp
+    Quadtree.h Quadtree.cpp
+
 )
 
 target_link_libraries(geographical-system
