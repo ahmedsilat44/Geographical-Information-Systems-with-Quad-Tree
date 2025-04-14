@@ -15,7 +15,7 @@ class insertPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit insertPage(QWidget *parent = nullptr);
+    explicit insertPage(QWidget *parent = nullptr, QuadTree *quadtree = nullptr);
     ~insertPage();
 
 private slots:
@@ -24,6 +24,7 @@ private slots:
 private:
     Ui::insertPage *ui;
     Widget *mainwindow;
+    QuadTree *quadtree; // Pointer to the quadtree
 };
 
 #endif // INSERTPAGE_H

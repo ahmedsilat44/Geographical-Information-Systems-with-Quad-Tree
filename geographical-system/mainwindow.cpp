@@ -10,6 +10,9 @@ Widget::Widget(QWidget *parent)
     , pointstable(nullptr)
 {
     ui->setupUi(this);
+    boundary = new Box (Point(10, 10), 20, 20);
+    
+    quadtree = new QuadTree(boundary, 4); // Initialize the quadtree with a bounding box
 }
 
 Widget::~Widget()
@@ -20,7 +23,7 @@ Widget::~Widget()
 void Widget::on_insertButton_clicked()
 {
     if (!insertpage)
-        insertpage = new insertPage();
+        insertpage = new insertPage(this, quadtree); // Pass the quadtree pointer to insertPage
     insertpage->show();
     this->hide();
 }

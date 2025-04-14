@@ -4,6 +4,8 @@ class pointsTable;
 #ifndef WIDGET_H
 #define WIDGET_H
 
+#include "Quadtree.h"
+
 #include <QWidget>
 #include "insertpage.h"
 #include "pointstable.h"
@@ -31,5 +33,8 @@ private:
     Ui::Widget *ui;
     insertPage *insertpage;
     pointsTable *pointstable;
+    QuadTree *quadtree; // quadtree pointer
+    
+
 };
 #endif // WIDGET_H

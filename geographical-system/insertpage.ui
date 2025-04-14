@@ -59,7 +59,7 @@
     <string>Y:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="enterPoint">
+  <widget class="QPushButton" name="enterButton">
    <property name="geometry">
     <rect>
      <x>40</x>
