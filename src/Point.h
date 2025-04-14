@@ -13,6 +13,7 @@ class Point {
         int distance_from_center(Point center);
         // != operator
         bool operator!=(const Point& other) const;
+        bool operator==(const Point& other) const;
 };
 
 #endif // POINT_H
