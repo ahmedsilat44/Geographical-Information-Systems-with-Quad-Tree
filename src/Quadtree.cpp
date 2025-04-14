@@ -1,15 +1,6 @@
 #include "Quadtree.h"
 #include <iostream>
-#include "matplotlibcpp.h"
-#include <cmath>
-
-using namespace std;
-namespace plt = matplotlibcpp;
-
-// create color array for color of lines based on depth
-const std::vector<std::string> colors = {"g", "r", "b", "c", "m", "y", "g"}; // Add more colors as needed
-
-std::vector<double> x_vals, y_vals;
+#include <algorithm> // for std::find
 
 Quadtree::Quadtree(Box boundary, int capacity, int depth): boundary(boundary), capacity(capacity), depth(depth) {
     divided = false;
@@ -268,6 +259,161 @@ Quadtree::~Quadtree(){
     delete sw;
     delete se;
 }
+
+std::vector<Point> Quadtree::square_query(Box range){
+    std::vector<Point> found_points;
+
+    
+    if (this->boundary.intersects(range) == false)
+        return found_points;
+
+    for (Point point:points){
+        if (range.contains_point(point))
+            found_points.push_back(point);
+    }
+
+    // std::cout << found_points.size() << " points found in the search area:\n";
+
+    
+    if (this->divided){
+        std::vector<Point> nw_points;
+        std::vector<Point> ne_points;
+        std::vector<Point> sw_points;
+        std::vector<Point> se_points;
+        
+        if (this->nw != nullptr){
+            std::vector<Point> nw_points=this->nw->square_query(range);
+        }
+        if (this->ne != nullptr){
+            std::vector<Point> ne_points=this->ne->square_query(range);
+        }
+        if (this->sw != nullptr){
+            std::vector<Point> sw_points=this->sw->square_query(range);
+        }
+        if (this->se != nullptr){
+            std::vector<Point> se_points=this->se->square_query(range);
+        }
+
+        // std::cout << "searching in ne\n";
+        // std::vector<Point> ne_points=this->ne->square_query(range);
+        // std::cout << "searching in sw\n";
+        // std::vector<Point> sw_points=this->sw->square_query(range);
+        // std::cout << "searching in se\n";
+        // std::vector<Point> se_points=this->se->square_query(range);
+        found_points.insert(found_points.end(),nw_points.begin(),nw_points.end());
+        
+        found_points.insert(found_points.end(),ne_points.begin(),ne_points.end());
+        found_points.insert(found_points.end(),sw_points.begin(),sw_points.end());
+        found_points.insert(found_points.end(),se_points.begin(),se_points.end());
+
+        
+        std::cout << found_points.size() << " points found in the search area:\n";
+    }
+
+    return found_points;
+}
+
+std::vector<Point> Quadtree::circle_query(Box range, Point center){
+    std::vector<Point> found_points;
+    if (!this->boundary.intersects(range))
+        return found_points;
+
+    for (Point point:points){
+        if (range.contains_point(point) & point.distance_from_center(center)<=range.get_width() & point != center)
+            found_points.push_back(point);
+    }
+    
+    if (this->divided){
+
+        std::vector<Point> nw_points;
+        std::vector<Point> ne_points;
+        std::vector<Point> sw_points;
+        std::vector<Point> se_points;
+
+
+
+
+
+        // std::vector<Point> nw_points=this->nw->circle_query(range,center);
+        // std::vector<Point> ne_points=this->ne->circle_query(range,center);
+        // std::vector<Point> sw_points=this->sw->circle_query(range,center);
+        // std::vector<Point> se_points=this->se->circle_query(range,center);
+
+        if (this->nw != nullptr){
+            std::vector<Point> nw_points=this->nw->circle_query(range,center);
+        }
+        if (this->ne != nullptr){
+            std::vector<Point> ne_points=this->ne->circle_query(range,center);
+        }
+        if (this->sw != nullptr){
+            std::vector<Point> sw_points=this->sw->circle_query(range,center);
+        }
+        if (this->se != nullptr){
+            std::vector<Point> se_points=this->se->circle_query(range,center);
+        }
+
+
+        found_points.insert(found_points.end(),nw_points.begin(),nw_points.end());
+        found_points.insert(found_points.end(),ne_points.begin(),ne_points.end());
+        found_points.insert(found_points.end(),sw_points.begin(),sw_points.end());
+        found_points.insert(found_points.end(),se_points.begin(),se_points.end());
+    }
+
+    return found_points;
+}
+
+bool Quadtree::delete_point(Point point){
+    // then check if its divided. if true. we calculate which quadrant the point is in and call delete_point on that quadrant
+    // then we check if the point is in the points vector. if it is, we remove it and return true. if not, we return false
+
+    if (boundary.contains_point(point) != true){ //is the point in the range of out map
+        return false;
+    }
+
+    if (divided) {
+        if(nw->boundary.contains_point(point)){
+            nw->delete_point(point);
+        } 
+        else if(ne->boundary.contains_point(point)){
+            ne->delete_point(point);
+        } 
+        else if(sw->boundary.contains_point(point)){
+            sw->delete_point(point);
+        } 
+        else if(se->boundary.contains_point(point)){
+            se->delete_point(point);
+        }
+    }
+    
+
+    auto it = std::find(points.begin(), points.end(), point); // Check if the point is in the current node's points
+
+    if (it != points.end()) {
+        points.erase(it); // Remove the point from the vector
+    }
+    
+    if (points.size() <= capacity && divided == true) {
+        // If the number of points in this node is less than the capacity and it has been divided,
+        // we can merge the quadrants back together (optional, depending on your implementation).
+        delete nw;
+        delete ne;
+        delete sw;
+        delete se;
+        nw = nullptr;
+        ne = nullptr;
+        sw = nullptr;
+        se = nullptr;
+        divided = false; // Mark as not divided
+    }
+    return false; // Point not found
+
+
+    
+}
+
+
+//auto it = std::find(points.begin(), points.end(), point);
+
 
 void Quadtree::drawpoint(){
     // std::vector<Point> points = this->get_points();

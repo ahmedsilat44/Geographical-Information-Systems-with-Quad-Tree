@@ -16,6 +16,7 @@ public:
     Point get_center();
     double get_height();
     double get_width();
+    bool intersects(Box range);
     double west = center.get_x() - width;
     double east = center.get_x() + width;
     double north = center.get_y() - height; //y increases in the down direction hence the "- height"
