@@ -3,9 +3,9 @@
 #include <ctime>     // For time()
 #include "Quadtree.h"
 
-#include "matplotlibcpp.h"
+// #include "matplotlibcpp.h"
 
-namespace plt = matplotlibcpp;
+// namespace plt = matplotlibcpp;
 
 
 
