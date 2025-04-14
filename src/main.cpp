@@ -121,7 +121,7 @@ int main() {
         // qt.print_Quadtree();
         Point p13(8, 8);
         qt.insert_point(p13);
-        Point p14(20, 7);
+        Point p14(19, 7);
         qt.insert_point(p14);
         
     }
@@ -130,30 +130,35 @@ int main() {
     std::cout<< "\nQuadtree Structure:\n";
     qt.print_Quadtree();
 
-    std::cout << "searching for points in the range (10, 10) to (20, 20)\n";
+    // std::cout << "searching for points in the range (10, 10) to (20, 20)\n";
 
-    // search 
-    //Point p1(15.98, 8.21); //p1 isnt centered at 10,10
-    Point p1(10,10); //now it is
-    Box search_area(p1, 5, 5); // Define a search area (center at (10,10), width and height of 5)
-    std::vector<Point> found_points = qt.square_query(search_area);
+    // // search 
+    // //Point p1(15.98, 8.21); //p1 isnt centered at 10,10
+    // Point p1(10,10); //now it is
+    // Box search_area(p1, 5, 5); // Define a search area (center at (10,10), width and height of 5)
+    // std::vector<Point> found_points = qt.square_query(search_area);
 
-    std::cout << found_points.size() << " points found in the search area:\n";
+    // std::cout << found_points.size() << " points found in the search area:\n";
 
-    std::cout << "\nPoints found in the search area:\n";
-    for (auto& point : found_points) {
-        std::cout << "(" << point.get_x() << ", " << point.get_y() << ")\n";
-    }
+    // std::cout << "\nPoints found in the search area:\n";
+    // for (auto& point : found_points) {
+    //     std::cout << "(" << point.get_x() << ", " << point.get_y() << ")\n";
+    // }
 
 
-    // Define a circle query area (center at p1, radius of 5)
-    std::cout << "\nSearching for points in the circle query area:\n";
-    std::vector<Point> circle_found_points = qt.circle_query(search_area, p1);
-    std::cout << circle_found_points.size() << " points found in the circle query area:\n";
+    // // Define a circle query area (center at p1, radius of 5)
+    // std::cout << "\nSearching for points in the circle query area:\n";
+    // std::vector<Point> circle_found_points = qt.circle_query(search_area, p1);
+    // std::cout << circle_found_points.size() << " points found in the circle query area:\n";
 
-    for (auto& point : circle_found_points) {
-        std::cout << "(" << point.get_x() << ", " << point.get_y() << ")\n";
-    }
+    // for (auto& point : circle_found_points) {
+    //     std::cout << "(" << point.get_x() << ", " << point.get_y() << ")\n";
+    // }
+
+    // // Delete a point from the Quadtree
+    std::cout << "\nDeleting point (15.98, 8.21):\n";
+    qt.delete_point(Point(19, 7));
+    qt.print_Quadtree();
 
     return 0;
 }

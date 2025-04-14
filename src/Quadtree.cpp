@@ -1,5 +1,6 @@
 #include "Quadtree.h"
 #include <iostream>
+#include <algorithm> // for std::find
 
 Quadtree::Quadtree(Box boundary, int capacity): boundary(boundary), capacity(capacity) {
 
@@ -264,3 +265,56 @@ std::vector<Point> Quadtree::circle_query(Box range, Point center){
 
     return found_points;
 }
+
+bool Quadtree::delete_point(Point point){
+    // then check if its divided. if true. we calculate which quadrant the point is in and call delete_point on that quadrant
+    // then we check if the point is in the points vector. if it is, we remove it and return true. if not, we return false
+
+    if (boundary.contains_point(point) != true){ //is the point in the range of out map
+        return false;
+    }
+
+    if (divided) {
+        if(nw->boundary.contains_point(point)){
+            nw->delete_point(point);
+        } 
+        else if(ne->boundary.contains_point(point)){
+            ne->delete_point(point);
+        } 
+        else if(sw->boundary.contains_point(point)){
+            sw->delete_point(point);
+        } 
+        else if(se->boundary.contains_point(point)){
+            se->delete_point(point);
+        }
+    }
+    
+
+    auto it = std::find(points.begin(), points.end(), point); // Check if the point is in the current node's points
+
+    if (it != points.end()) {
+        points.erase(it); // Remove the point from the vector
+    }
+    
+    if (points.size() <= capacity && divided == true) {
+        // If the number of points in this node is less than the capacity and it has been divided,
+        // we can merge the quadrants back together (optional, depending on your implementation).
+        delete nw;
+        delete ne;
+        delete sw;
+        delete se;
+        nw = nullptr;
+        ne = nullptr;
+        sw = nullptr;
+        se = nullptr;
+        divided = false; // Mark as not divided
+    }
+    return false; // Point not found
+
+
+    
+}
+
+
+//auto it = std::find(points.begin(), points.end(), point);
+

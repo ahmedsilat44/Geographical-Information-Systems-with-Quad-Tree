@@ -17,6 +17,7 @@ class Quadtree{
     public:
         Quadtree(Box boundary, int capacity = 4);
         bool insert_point(Point point);
+        bool delete_point(Point point);
         void divide();
         void print_Quadtree(int deapth = 0);
         std::vector<Point> square_query(Box range);
