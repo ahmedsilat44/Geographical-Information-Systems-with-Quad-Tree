@@ -1,6 +1,16 @@
 #include "Quadtree.h"
 #include <iostream>
 #include <algorithm> // for std::find
+#include <cmath>
+// #include "matplotlibcpp.h"
+
+using namespace std;
+// namespace plt = matplotlibcpp;
+
+// create color array for color of lines based on depth
+const std::vector<std::string> colors = {"g", "r", "b", "c", "m", "y", "g"}; // Add more colors as needed
+
+std::vector<double> x_vals, y_vals;
 
 Quadtree::Quadtree(Box boundary, int capacity, int depth): boundary(boundary), capacity(capacity), depth(depth) {
     divided = false;
