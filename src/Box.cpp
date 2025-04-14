@@ -4,8 +4,8 @@ Box::Box(Point center, double width, double height): center(center), height (hei
 
 bool Box::contains_point(Point point){
     // take care of boundry points 
-    bool result = (west < point.get_x() && point.get_x() <= east) &&
-                  (north < point.get_y() && point.get_y() <= south);
+    bool result = (west <= point.get_x() && point.get_x() < east) &&
+                  (north <= point.get_y() && point.get_y() < south);
     
 
     return result;
