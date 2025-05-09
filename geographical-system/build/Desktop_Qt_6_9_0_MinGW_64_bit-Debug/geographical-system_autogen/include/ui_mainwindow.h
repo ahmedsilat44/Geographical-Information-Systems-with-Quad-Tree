@@ -15,6 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
@@ -34,10 +35,11 @@ public:
     QTableWidget *tableWidget;
     QPushButton *deleteButton;
     QPushButton *searchButton;
-    QLineEdit *lineEdit_3;
     QPushButton *backButton_2;
     QLabel *label_4;
     QPushButton *searchButton_2;
+    QPushButton *visualizeButton;
+    QSpinBox *lineEdit_3;
     QWidget *page_2;
     QPushButton *pushButton;
     QLineEdit *lineEdit_2;
@@ -86,7 +88,7 @@ public:
 "padding: 5px; "));
         label_5 = new QLabel(page);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(170, 10, 281, 41));
+        label_5->setGeometry(QRect(100, 10, 391, 41));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Yu Gothic UI")});
         font1.setPointSize(16);
@@ -130,9 +132,6 @@ public:
 "color: white;             \n"
 "border-radius: 0px;\n"
 "padding: 5px; "));
-        lineEdit_3 = new QLineEdit(page_3);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(402, 80, 191, 24));
         backButton_2 = new QPushButton(page_3);
         backButton_2->setObjectName("backButton_2");
         backButton_2->setGeometry(QRect(499, 290, 91, 31));
@@ -158,6 +157,20 @@ public:
 "color: white;             \n"
 "border-radius: 0px;\n"
 "padding: 5px; "));
+        visualizeButton = new QPushButton(page_3);
+        visualizeButton->setObjectName("visualizeButton");
+        visualizeButton->setGeometry(QRect(150, 290, 91, 31));
+        visualizeButton->setFont(font);
+        visualizeButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        visualizeButton->setStyleSheet(QString::fromUtf8("background-color: #000060; \n"
+"color: white;             \n"
+"border-radius: 0px;\n"
+"padding: 5px; "));
+        lineEdit_3 = new QSpinBox(page_3);
+        lineEdit_3->setObjectName("lineEdit_3");
+        lineEdit_3->setGeometry(QRect(420, 80, 91, 26));
+        lineEdit_3->setMinimum(1);
+        lineEdit_3->setMaximum(10);
         stackedWidget->addWidget(page_3);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
@@ -204,7 +217,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -225,7 +238,8 @@ public:
         searchButton->setText(QCoreApplication::translate("Widget", "Search Square", nullptr));
         backButton_2->setText(QCoreApplication::translate("Widget", "Back", nullptr));
         label_4->setText(QCoreApplication::translate("Widget", "Set Radius", nullptr));
-        searchButton_2->setText(QCoreApplication::translate("Widget", "Visualize", nullptr));
+        searchButton_2->setText(QCoreApplication::translate("Widget", "Search Circle", nullptr));
+        visualizeButton->setText(QCoreApplication::translate("Widget", "Visualize", nullptr));
         pushButton->setText(QCoreApplication::translate("Widget", "Enter", nullptr));
         backButton->setText(QCoreApplication::translate("Widget", "Back", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Y:", nullptr));
