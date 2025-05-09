@@ -1,17 +1,55 @@
 # ninja log v6
-153	5637	7662571812693990	geographical-system_autogen/timestamp	23a9a4d0eb03046d
-153	5637	7662571812693990	geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
-153	5637	7662571812693990	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	23a9a4d0eb03046d
-153	5637	7662571812693990	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
-5654	15726	7662571814683956	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	a0493636cd5556b3
-5644	15728	7662571814583941	CMakeFiles/geographical-system.dir/geographical-system_autogen/mocs_compilation.cpp.obj	1c7bd4d74bee3599
-5648	15739	7662571814626236	CMakeFiles/geographical-system.dir/main.cpp.obj	c7634a00ea5499e8
-5659	15866	7662571814733965	CMakeFiles/geographical-system.dir/insertpage.cpp.obj	64a3b760752b452c
-5664	16583	7662571814783979	CMakeFiles/geographical-system.dir/pointstable.cpp.obj	6c29fbc791dcbbb1
-16583	17736	7662571923974052	geographical-system.exe	e42deb740934acba
-37	441	7662573399637955	geographical-system_autogen/timestamp	23a9a4d0eb03046d
-37	441	7662573399637955	geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
-37	441	7662573399637955	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	23a9a4d0eb03046d
-37	441	7662573399637955	D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	23a9a4d0eb03046d
-442	6501	7662573403687961	CMakeFiles/geographical-system.dir/pointstable.cpp.obj	6c29fbc791dcbbb1
-6501	7006	7662573464272081	geographical-system.exe	e42deb740934acba
+823	885	7666724822877146	CMakeFiles/geographical-system.dir/Box.cpp.obj	f3861cf2dd87230e
+1581	5972	7667027339083860	CMakeFiles/geographical-system.dir/geographical-system_autogen/mocs_compilation.cpp.obj	d24a53b790b3ab2f
+165	2617	7667027525523859	CMakeFiles/geographical-system.dir/main.cpp.obj	b5761bbf024fe4cb
+294	3115	7667092938440748	CMakeFiles/geographical-system.dir/Quadtree.cpp.obj	e15eafa3b4f2605e
+9048	9721	7667093025974657	geographical-system.exe	145d6edec4b2245b
+826	1063	7666724822907080	CMakeFiles/geographical-system.dir/Point.cpp.obj	5753cc7c65f3b947
+58	287	7667092936070288	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	158310ea6edd39e6
+58	287	7667092936070288	geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+289	9048	7667092938400751	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	2edfff4f531cedbe
+58	287	7667092936070288	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+25	46	7665094867279740	CMakeFiles/clean.additional	baedbe210acaa455
+46	54	7665094867498497	clean	d6542ab91c93f907
+7	986	7666724787673429	build.ninja	44260ff08d169158
+58	287	7667092936070288	geographical-system_autogen/timestamp	158310ea6edd39e6
+42	287	7667094226768114	geographical-system_autogen/timestamp	158310ea6edd39e6
+42	287	7667094226768114	geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+42	287	7667094226768114	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	158310ea6edd39e6
+42	287	7667094226768114	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+289	5967	7667094229228450	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	2edfff4f531cedbe
+5967	6781	7667094286006005	geographical-system.exe	145d6edec4b2245b
+67	406	7667095055273404	geographical-system_autogen/timestamp	158310ea6edd39e6
+67	406	7667095055273404	geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+67	406	7667095055273404	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	158310ea6edd39e6
+67	406	7667095055273404	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+414	3372	7667095058755246	CMakeFiles/geographical-system.dir/Quadtree.cpp.obj	e15eafa3b4f2605e
+408	7222	7667095058715415	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	2edfff4f531cedbe
+7223	7961	7667095126844995	geographical-system.exe	145d6edec4b2245b
+56	514	7667095830733750	geographical-system_autogen/timestamp	158310ea6edd39e6
+56	514	7667095830733750	geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+56	514	7667095830733750	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	158310ea6edd39e6
+56	514	7667095830733750	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+516	5881	7667095835335896	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	2edfff4f531cedbe
+5882	6503	7667095888973119	geographical-system.exe	145d6edec4b2245b
+69	1003	7685061059574058	geographical-system_autogen/timestamp	158310ea6edd39e6
+69	1003	7685061059574058	geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+69	1003	7685061059574058	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	158310ea6edd39e6
+69	1003	7685061059574058	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+1004	3805	7685061060351983	CMakeFiles/geographical-system.dir/geographical-system_autogen/mocs_compilation.cpp.obj	d24a53b790b3ab2f
+1007	3963	7685061060371927	CMakeFiles/geographical-system.dir/main.cpp.obj	b5761bbf024fe4cb
+1010	5156	7685061060411824	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	2edfff4f531cedbe
+5156	5958	7685061101871030	geographical-system.exe	145d6edec4b2245b
+13	153	7685064650768424	geographical-system_autogen/timestamp	158310ea6edd39e6
+13	153	7685064650768424	geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+13	153	7685064650768424	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	158310ea6edd39e6
+13	153	7685064650768424	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+157	1566	7685064652205493	CMakeFiles/geographical-system.dir/Quadtree.cpp.obj	e15eafa3b4f2605e
+154	3610	7685064652185549	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	2edfff4f531cedbe
+3611	4019	7685064686744204	geographical-system.exe	145d6edec4b2245b
+15	173	7685072273215557	geographical-system_autogen/timestamp	158310ea6edd39e6
+15	173	7685072273215557	geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+15	173	7685072273215557	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/timestamp	158310ea6edd39e6
+15	173	7685072273215557	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/mocs_compilation.cpp	158310ea6edd39e6
+174	3539	7685072274810107	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	2edfff4f531cedbe
+3543	3964	7685072308496310	geographical-system.exe	145d6edec4b2245b

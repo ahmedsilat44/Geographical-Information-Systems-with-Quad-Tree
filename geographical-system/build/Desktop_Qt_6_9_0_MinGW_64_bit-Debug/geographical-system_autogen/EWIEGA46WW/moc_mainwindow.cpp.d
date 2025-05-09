@@ -1,5 +1,5 @@
-D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Faheem/habib/cs/DS2/project/geographical-system/mainwindow.h \
-  D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/moc_predefs.h \
+C:/Users/ahmed/source/repos/Login\ Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/ahmed/source/repos/Login\ Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/mainwindow.h \
+  C:/Users/ahmed/source/repos/Login\ Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/geographical-system_autogen/moc_predefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \
@@ -368,6 +368,6 @@ D:/Faheem/habib/cs/DS2/project/geographical-system/build/Desktop_Qt_6_9_0_MinGW_
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  D:/Faheem/habib/cs/DS2/project/geographical-system/insertpage.h \
-  D:/Faheem/habib/cs/DS2/project/geographical-system/mainwindow.h \
-  D:/Faheem/habib/cs/DS2/project/geographical-system/pointstable.h
+  C:/Users/ahmed/source/repos/Login\ Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/Box.h \
+  C:/Users/ahmed/source/repos/Login\ Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/Point.h \
+  C:/Users/ahmed/source/repos/Login\ Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/Quadtree.h

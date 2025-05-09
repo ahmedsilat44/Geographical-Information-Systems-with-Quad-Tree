@@ -1,0 +1,23 @@
+# ninja log v6
+24	905	7665930531372730	geographical-system_autogen/timestamp	443f551a1c590003
+24	905	7665930531372730	geographical-system_autogen/mocs_compilation.cpp	443f551a1c590003
+24	905	7665930531372730	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/geographical-system_autogen/timestamp	443f551a1c590003
+916	981	7665930532220476	CMakeFiles/geographical-system.dir/Box.cpp.obj	be2afb217e62769c
+912	4144	7665930532190541	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	41bf5833a144ed02
+24	905	7665930531372730	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/geographical-system_autogen/mocs_compilation.cpp	443f551a1c590003
+919	1172	7665930532250381	CMakeFiles/geographical-system.dir/Point.cpp.obj	98fdb57b7acca177
+922	2156	7665930532290291	CMakeFiles/geographical-system.dir/Quadtree.cpp.obj	e86f15a92a6efb8d
+909	3733	7665930532150646	CMakeFiles/geographical-system.dir/main.cpp.obj	1802c7398fc9c6dc
+906	3270	7665930532120743	CMakeFiles/geographical-system.dir/geographical-system_autogen/mocs_compilation.cpp.obj	15bdccc774d4333c
+4145	4461	7665930564514184	geographical-system.exe	71070140ec948966
+27	960	7685071249736941	geographical-system_autogen/timestamp	443f551a1c590003
+27	960	7685071249736941	geographical-system_autogen/mocs_compilation.cpp	443f551a1c590003
+27	960	7685071249736941	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/geographical-system_autogen/timestamp	443f551a1c590003
+27	960	7685071249736941	C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/geographical-system_autogen/mocs_compilation.cpp	443f551a1c590003
+973	1086	7685071250634638	CMakeFiles/geographical-system.dir/Box.cpp.obj	fbf445dc28cbfaef
+977	1296	7685071250674441	CMakeFiles/geographical-system.dir/Point.cpp.obj	cc397331cf2d146c
+980	2508	7685071250714317	CMakeFiles/geographical-system.dir/Quadtree.cpp.obj	5d6aef60c6c33d6f
+962	3560	7685071250524974	CMakeFiles/geographical-system.dir/geographical-system_autogen/mocs_compilation.cpp.obj	6d2a4ff69b21fcc
+965	3853	7685071250564716	CMakeFiles/geographical-system.dir/main.cpp.obj	5f16616573e89545
+969	4863	7685071250604611	CMakeFiles/geographical-system.dir/mainwindow.cpp.obj	872fb5b4a41ff287
+4865	5282	7685071289562919	geographical-system.exe	71070140ec948966
