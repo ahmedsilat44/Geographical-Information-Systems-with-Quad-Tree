@@ -21,6 +21,12 @@ bool Quadtree::insert_point(Point point){
         return false;
     }
 
+    // check if point already in points
+    auto it = std::find(points.begin(), points.end(), point);
+    if (it != points.end()) {
+        return false; // Point already exists, do not insert
+    }
+
     
     points.push_back(point);
     x_vals.clear(); // Clear previous x values

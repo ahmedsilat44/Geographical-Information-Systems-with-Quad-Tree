@@ -47,7 +47,7 @@
     <cursorShape>ArrowCursor</cursorShape>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QPushButton" name="insertButton">
@@ -110,9 +110,9 @@ padding: 5px; </string>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>100</x>
        <y>10</y>
-       <width>281</width>
+       <width>391</width>
        <height>41</height>
       </rect>
      </property>
@@ -225,16 +225,6 @@ padding: 5px; </string>
       <string>Search Square</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
-     <property name="geometry">
-      <rect>
-       <x>402</x>
-       <y>80</y>
-       <width>191</width>
-       <height>24</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="backButton_2">
      <property name="geometry">
       <rect>
@@ -305,7 +295,50 @@ border-radius: 0px;
 padding: 5px; </string>
      </property>
      <property name="text">
+      <string>Search Circle</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="visualizeButton">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>290</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
+     </property>
+     <property name="text">
       <string>Visualize</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>80</y>
+       <width>91</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
      </property>
     </widget>
    </widget>

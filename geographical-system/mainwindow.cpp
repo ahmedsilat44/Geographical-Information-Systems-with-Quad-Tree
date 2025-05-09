@@ -132,6 +132,12 @@ void Widget::on_searchButton_clicked()
 {
     // fetch the selected row from the table widget
     int selectedRow = ui->tableWidget->currentRow();
+
+    if(selectedRow < 0) {
+        QMessageBox::warning(this, "Selection Error", "Please select a point from the table.");
+        return;
+    }
+
     // its value in x and y coordinates
     double x = ui->tableWidget->item(selectedRow, 0)->text().toDouble();
     double y = ui->tableWidget->item(selectedRow, 1)->text().toDouble();
@@ -164,7 +170,7 @@ void Widget::on_searchButton_clicked()
         x_vals.push_back(point.get_x());
         y_vals.push_back(point.get_y());
     }
-    plt::scatter(x_vals, y_vals, 10.0, {{"color", "k"}});
+    plt::scatter(x_vals, y_vals, 20.0, {{"color", "k"}});
 
     // Draw the search area as a rectangle
     double left_x = x - w;
@@ -185,7 +191,7 @@ void Widget::on_searchButton_clicked()
         x_search.push_back(found_points[i].get_x());
         y_search.push_back(found_points[i].get_y());
     }
-    plt::scatter(x_search, y_search, 10.0, {{"edgecolor", "r"}}); // Plot all points in black
+    plt::scatter(x_search, y_search, 20.0, {{"edgecolor", "r"}}); // Plot all points in black
 
     plt::show(); // Show the plot
 
@@ -218,11 +224,8 @@ void Widget::on_pushButton_2_clicked()
 
     Point p11(1, 1);
     quadtree->insert_point(p11);
-    // quadtree->print_Quadtree();
     Point p12(5, 5);
     quadtree->insert_point(p12);
-    // std::cout<< "\nHEHEHEHE\n";
-    // quadtree->print_Quadtree();
     Point p13(8, 8);
     quadtree->insert_point(p13);
     Point p14(20, 7);
@@ -256,12 +259,17 @@ void Widget::on_pushButton_2_clicked()
         quadtree->insert_point(p27);
         quadtree->insert_point(p28);
     std::cout<<"points isnerted"<<std::endl;
+    QMessageBox::information(this, "Points Inserted", "Pre defined points inserted successfully");
 }
 
 
 void Widget::on_searchButton_2_clicked()
 {
     int selectedRow = ui->tableWidget->currentRow();
+    if(selectedRow < 0) {
+        QMessageBox::warning(this, "Selection Error", "Please select a point from the table.");
+        return;
+    }
     // its value in x and y coordinates
     double x = ui->tableWidget->item(selectedRow, 0)->text().toDouble();
     double y = ui->tableWidget->item(selectedRow, 1)->text().toDouble();
@@ -371,6 +379,10 @@ void Widget::on_deleteButton_clicked()
 {
     // fecth the selected row from the table widget
     int selectedRow = ui->tableWidget->currentRow();
+    if(selectedRow < 0) {
+        QMessageBox::warning(this, "Selection Error", "Please select a point from the table.");
+        return;
+    }
     // its value in x and y coordinates
     double x = ui->tableWidget->item(selectedRow, 0)->text().toDouble();
     double y = ui->tableWidget->item(selectedRow, 1)->text().toDouble();
