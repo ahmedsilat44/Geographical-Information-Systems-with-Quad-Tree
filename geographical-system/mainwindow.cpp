@@ -187,14 +187,30 @@ void Widget::on_searchButton_clicked()
    
 
     std::vector<double> x_search, y_search;
+    // keep track of nearest neighbor
+    Point nearest_neighbor = found_points[0];
+    double min_distance = 200; // Initialize with a large value
+
     for (int i = 0; i < found_points.size(); i++) {
+        double distance = found_points[i].distance_from_center(p1);
+        if (distance < min_distance) {
+            min_distance = distance;
+            nearest_neighbor = found_points[i];
+        }
         x_search.push_back(found_points[i].get_x());
         y_search.push_back(found_points[i].get_y());
     }
+    
     plt::scatter(x_search, y_search, 20.0, {{"edgecolor", "r"}}); // Plot all points in black
 
+
+    std::string subtitle = "Nearest Neighbor: (" + std::to_string(nearest_neighbor.get_x()) + ", " + std::to_string(nearest_neighbor.get_y()) + ")";
+    
+    QMessageBox::information(this, "Search Result", "Search area: (" + QString::number(left_x) + ", " + QString::number(top_y) + ") to (" + QString::number(right_x) + ", " + QString::number(bottom_y) + ")\nNearest Neighbor: (" + QString::number(nearest_neighbor.get_x()) + ", " + QString::number(nearest_neighbor.get_y()) + ")");
+    
     plt::show(); // Show the plot
 
+    
 
 }
 
@@ -313,7 +329,7 @@ void Widget::on_searchButton_2_clicked()
     plt::ylabel("Y-axis");
     std::vector<Point> points = quadtree->get_points();
 
-    // Plot the points
+    
     for (auto& point : points) {
         x_vals.push_back(point.get_x());
         y_vals.push_back(point.get_y());
@@ -322,17 +338,31 @@ void Widget::on_searchButton_2_clicked()
 
     std::vector<Point> circle_found_points = quadtree->circle_query(search_area,p1);
 
+
+// keep track of nearest neighbor
+    Point nearest_neighbor = circle_found_points[0];
+    double min_distance = 200; // Initialize with a large value
+    
+
     std::vector<double> x_search, y_search;
     for (int i = 0; i < circle_found_points.size(); i++) {
+
+        double distance = circle_found_points[i].distance_from_center(p1);
+        if (distance < min_distance) {
+            min_distance = distance;
+            nearest_neighbor = circle_found_points[i];
+        }
+
         x_search.push_back(circle_found_points[i].get_x());
         y_search.push_back(circle_found_points[i].get_y());
     }
-    plt::scatter(x_search, y_search, 10.0, {{"edgecolor", "r"}}); // Plot all points in black
-    // for(int i=0;i<circle_found_points.size();i++)
-    // {
-    //     std::cout<<circle_found_points[i].get_x()<<" "<<circle_found_points[i].get_y()<<std::endl;
     
-    // }
+    plt::scatter(x_search, y_search, 10.0, {{"edgecolor", "r"}}); // Plot all points in black
+
+    std::string subtitle = "Nearest Neighbor: (" + std::to_string(nearest_neighbor.get_x()) + ", " + std::to_string(nearest_neighbor.get_y()) + ")";
+    
+    QMessageBox::information(this, "Search Result", "Nearest Neighbor: (" + QString::number(nearest_neighbor.get_x()) + ", " + QString::number(nearest_neighbor.get_y()) + ")");
+
 
     plt::show(); // Show the plot   
 }
