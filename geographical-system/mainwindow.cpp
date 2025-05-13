@@ -184,12 +184,18 @@ void Widget::on_searchButton_clicked()
     
 
     std::vector<Point> found_points = quadtree->square_query(search_area);
-   
+        
+    if(found_points.size() == 0) {
+        QMessageBox::information(this, "Search Result", "No points found in the search area.");
+        return;
+    }
 
     std::vector<double> x_search, y_search;
     // keep track of nearest neighbor
     Point nearest_neighbor = found_points[0];
     double min_distance = 200; // Initialize with a large value
+
+    
 
     for (int i = 0; i < found_points.size(); i++) {
         double distance = found_points[i].distance_from_center(p1);
@@ -204,10 +210,16 @@ void Widget::on_searchButton_clicked()
     plt::scatter(x_search, y_search, 20.0, {{"edgecolor", "r"}}); // Plot all points in black
 
 
-    std::string subtitle = "Nearest Neighbor: (" + std::to_string(nearest_neighbor.get_x()) + ", " + std::to_string(nearest_neighbor.get_y()) + ")";
-    
-    QMessageBox::information(this, "Search Result", "Search area: (" + QString::number(left_x) + ", " + QString::number(top_y) + ") to (" + QString::number(right_x) + ", " + QString::number(bottom_y) + ")\nNearest Neighbor: (" + QString::number(nearest_neighbor.get_x()) + ", " + QString::number(nearest_neighbor.get_y()) + ")");
-    
+    if(found_points.size() == 0) {
+        QMessageBox::information(this, "Search Result", "No points found in the search area.");
+        return;
+    }else{
+
+        std::string subtitle = "Nearest Neighbor: (" + std::to_string(nearest_neighbor.get_x()) + ", " + std::to_string(nearest_neighbor.get_y()) + ")";
+        
+        QMessageBox::information(this, "Search Result", "Search area: (" + QString::number(left_x) + ", " + QString::number(top_y) + ") to (" + QString::number(right_x) + ", " + QString::number(bottom_y) + ")\nNearest Neighbor: (" + QString::number(nearest_neighbor.get_x()) + ", " + QString::number(nearest_neighbor.get_y()) + ")");
+        
+    }
     plt::show(); // Show the plot
 
     
@@ -338,6 +350,10 @@ void Widget::on_searchButton_2_clicked()
 
     std::vector<Point> circle_found_points = quadtree->circle_query(search_area,p1);
 
+    if(circle_found_points.size() == 0) {
+        QMessageBox::information(this, "Search Result", "No points found in the search area.");
+        return;
+    }
 
 // keep track of nearest neighbor
     Point nearest_neighbor = circle_found_points[0];
@@ -359,10 +375,14 @@ void Widget::on_searchButton_2_clicked()
     
     plt::scatter(x_search, y_search, 10.0, {{"edgecolor", "r"}}); // Plot all points in black
 
+    if(circle_found_points.size() == 0) {
+        QMessageBox::information(this, "Search Result", "No points found in the search area.");
+        return;
+    }else{
     std::string subtitle = "Nearest Neighbor: (" + std::to_string(nearest_neighbor.get_x()) + ", " + std::to_string(nearest_neighbor.get_y()) + ")";
     
     QMessageBox::information(this, "Search Result", "Nearest Neighbor: (" + QString::number(nearest_neighbor.get_x()) + ", " + QString::number(nearest_neighbor.get_y()) + ")");
-
+    }
 
     plt::show(); // Show the plot   
 }
@@ -370,6 +390,8 @@ void Widget::on_searchButton_2_clicked()
 
 void Widget::on_visualizeButton_clicked()
 {
+
+
     plt::figure_size(800, 600);
     plt::axis("scaled");
     plt::xlim(0, 20);
@@ -378,6 +400,11 @@ void Widget::on_visualizeButton_clicked()
     plt::xlabel("X-axis");
     plt::ylabel("Y-axis");
     std::vector<Point> points = quadtree->get_points();
+    if(points.size() == 0) {
+        QMessageBox::information(this, "Visualization", "No points found in the quadtree.");
+        return;
+    }
+
     std::vector<double> x_vals, y_vals;
     x_vals.push_back(points[0].get_x());
     y_vals.push_back(points[0].get_y());

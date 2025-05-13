@@ -283,6 +283,7 @@ std::vector<Point> Quadtree::square_query(Box range){
     if (this->boundary.intersects(range) == false)
         return found_points;
 
+    
     for (Point point:points){
         if (range.contains_point(point)  & point != range.get_center())
             found_points.push_back(point);
