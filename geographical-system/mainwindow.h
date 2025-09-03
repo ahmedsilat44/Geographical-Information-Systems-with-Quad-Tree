@@ -9,6 +9,7 @@ class pointsTable;
 #include <QWidget>
 
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Widget;
@@ -23,7 +24,7 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
-private slots:
+private Q_SLOTS:
     void on_insertButton_clicked();
 
     void on_tableButton_clicked();
@@ -42,12 +43,16 @@ private slots:
 
     void on_searchButton_2_clicked();
 
+    void on_visualizeButton_clicked();
+	
+	void on_deleteButton_clicked();
+
 private:
     Ui::Widget *ui;
 
     Quadtree *quadtree; // quadtree pointer
     
-signals:
+Q_SIGNALS:
     void pointInserted();  // Custom signal
 };
 #endif // WIDGET_H

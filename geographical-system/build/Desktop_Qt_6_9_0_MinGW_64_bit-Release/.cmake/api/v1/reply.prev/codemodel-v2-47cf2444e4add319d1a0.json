@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-21c0b1a930a887ff895f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "geographical-system",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "geographical-system::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geographical-system-Release-96f925899b28132f5513.json",
+					"name" : "geographical-system",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "geographical-system_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geographical-system_autogen-Release-052f30ad1e91db0d24e2.json",
+					"name" : "geographical-system_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "geographical-system_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geographical-system_autogen_timestamp_deps-Release-1a0cb656ebcdcf471526.json",
+					"name" : "geographical-system_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system/build/Desktop_Qt_6_9_0_MinGW_64_bit-Release",
+		"source" : "C:/Users/ahmed/source/repos/Login Registeration/Geographical-Information-Systems-with-Quad-Tree/geographical-system"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

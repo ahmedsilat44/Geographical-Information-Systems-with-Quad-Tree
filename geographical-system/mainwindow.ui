@@ -32,11 +32,16 @@
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>-10</x>
-     <y>30</y>
+     <x>0</x>
+     <y>10</y>
      <width>631</width>
      <height>381</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Yu Gothic UI</family>
+    </font>
    </property>
    <property name="cursor">
     <cursorShape>ArrowCursor</cursorShape>
@@ -51,11 +56,22 @@
        <x>270</x>
        <y>140</y>
        <width>80</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
      </property>
      <property name="text">
       <string>Insert Points</string>
@@ -70,14 +86,53 @@
        <x>270</x>
        <y>200</y>
        <width>80</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
+     </property>
      <property name="text">
       <string>View Points</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>391</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 16pt;color: #333333;</string>
+     </property>
+     <property name="text">
+      <string>Proximity Scanning System</string>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>54</number>
      </property>
     </widget>
    </widget>
@@ -87,7 +142,7 @@
       <rect>
        <x>70</x>
        <y>80</y>
-       <width>241</width>
+       <width>231</width>
        <height>192</height>
       </rect>
      </property>
@@ -97,6 +152,12 @@
      <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
      </property>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>28</number>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>115</number>
+     </attribute>
      <column>
       <property name="text">
        <string>X</string>
@@ -111,11 +172,27 @@
     <widget class="QPushButton" name="deleteButton">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>140</y>
-       <width>80</width>
-       <height>24</height>
+       <x>400</x>
+       <y>290</y>
+       <width>91</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+ 
+padding:5px;
+  </string>
      </property>
      <property name="text">
       <string>Delete</string>
@@ -124,37 +201,52 @@
     <widget class="QPushButton" name="searchButton">
      <property name="geometry">
       <rect>
-       <x>430</x>
+       <x>400</x>
        <y>140</y>
-       <width>80</width>
-       <height>24</height>
+       <width>91</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
      </property>
      <property name="text">
       <string>Search Square</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
-     <property name="geometry">
-      <rect>
-       <x>402</x>
-       <y>80</y>
-       <width>181</width>
-       <height>24</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="backButton_2">
      <property name="geometry">
       <rect>
-       <x>500</x>
+       <x>499</x>
        <y>290</y>
-       <width>80</width>
-       <height>24</height>
+       <width>91</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
      </property>
      <property name="text">
       <string>Back</string>
@@ -169,6 +261,12 @@
        <height>16</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>Set Radius</string>
      </property>
@@ -178,12 +276,69 @@
       <rect>
        <x>520</x>
        <y>140</y>
-       <width>80</width>
-       <height>24</height>
+       <width>91</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
      </property>
      <property name="text">
       <string>Search Circle</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="visualizeButton">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>290</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
+     </property>
+     <property name="text">
+      <string>Visualize</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>80</y>
+       <width>91</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
      </property>
     </widget>
    </widget>
@@ -191,11 +346,25 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>280</y>
+       <x>380</x>
+       <y>120</y>
        <width>80</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
      </property>
      <property name="text">
       <string>Enter</string>
@@ -215,13 +384,24 @@
      <property name="geometry">
       <rect>
        <x>380</x>
-       <y>280</y>
+       <y>220</y>
        <width>80</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
      </property>
      <property name="text">
       <string>Back</string>
@@ -232,7 +412,7 @@
       <rect>
        <x>190</x>
        <y>70</y>
-       <width>113</width>
+       <width>111</width>
        <height>24</height>
       </rect>
      </property>
@@ -266,14 +446,28 @@
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>290</y>
-       <width>80</width>
-       <height>24</height>
+       <x>190</x>
+       <y>220</y>
+       <width>101</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #000060; 
+color: white;             
+border-radius: 0px;
+padding: 5px; </string>
+     </property>
      <property name="text">
-      <string>pre</string>
+      <string>Pre-Defined pts</string>
      </property>
     </widget>
    </widget>
